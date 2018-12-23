@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The Binding of Isaac: Four Souls</title>
+
+<style>
+body {
+	background-color: black;
+	background-image:;
+	text-align: center;
+	color: white;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:35px;
+}
+button {
+	font-size: 30px;
+	width: 60px;
+	background-color:white;
+}
+button.p {	
+	border: 3px solid green;
+}
+button.n {	
+	border: 3px solid red;
+}
+
+</style>
+</head>
+<body>
+
+<!--Coins--><br>
+
+<div id="Coins" style="color:gold">
+
+<u><h1 style="font-size:35px">Coins</h1></u>
+
+<div id="playerOneCoin">
+<button class="n" type="button" onclick="playerCoin(-5)">-5</button>
+<button class="n" type="button" onclick="playerCoin(-1)">-1</button>
+
+<span id="playerCoin" style="background-color:black;padding:10px;border: 2px solid gold">0</span>
+
+<button class="p" type="button" onclick="playerCoin(1)">+1</button>
+<button class="p" type="button" onclick="playerCoin(5)">+5</button>
+</div>
+
+</div>
+
+<!--Monster HP--><br>
+
+<div id="HP" style="color:#e88dd6">
+
+<u><h1 style="font-size:35px">Monster HP</h1></u>
+
+<div id="monsterHP">
+<button class="n" type="button" onclick="mobHP(-5)">-5</button>
+<button class="n" type="button" onclick="mobHP(-1)">-1</button>
+
+<span id="mobHP" style="background-color:black;padding:10px;border: 2px solid #e88dd6">0</span>
+
+<button class="p" type="button" onclick="mobHP(1)">+1</button>
+<button class="p" type="button" onclick="mobHP(5)">+5</button>
+</div>
+
+</div>
+
+<!--Monster ATK--><br>
+
+<div id="ATK" style="color:#52707c">
+
+<u><h1 style="font-size:35px">Monster ATK</h1></u>
+
+<div id="monsterATK">
+<button class="n" type="button" onclick="mobATK(-5)">-5</button>
+<button class="n" type="button" onclick="mobATK(-1)">-1</button>
+
+<span id="mobATK" style="background-color:black;padding:10px;border: 2px solid #52707c">0</span>
+
+<button class="p" type="button" onclick="mobATK(1)">+1</button>
+<button class="p" type="button" onclick="mobATK(5)">+5</button>
+</div>
+
+</div>
+
+<!--Monster Dice--><br>
+
+<div id="Dice" style="color:#bababa">
+
+<u><h1 style="font-size:35px">Monster Dice</h1></u>
+
+<div id="monsterDice">
+<button class="n" type="button" onclick="mobDice(-5)">-5</button>
+<button class="n" type="button" onclick="mobDice(-1)">-1</button>
+
+<span id="mobDice" style="background-color:black;padding:10px;border: 2px solid #bababa">0</span>
+
+<button class="p" type="button" onclick="mobDice(1)">+1</button>
+<button class="p" type="button" onclick="mobDice(5)">+5</button>
+</div>
+
+</div>
+
+<script>
+
+<!--Coin-->
+
+function playerCoin(s) {
+
+var playerCoinValue = parseInt(document.getElementById("playerCoin").innerHTML) + s
+
+if (playerCoinValue < 0){
+	playerCoinValue = 0
+}
+	
+document.getElementById("playerCoin").innerHTML = playerCoinValue
+
+}
+
+<!--HP-->
+
+function mobHP(s) {
+
+var mobHPValue = parseInt(document.getElementById("mobHP").innerHTML) + s
+
+if (mobHPValue < 0){
+	mobHPValue = 0
+}
+	
+document.getElementById("mobHP").innerHTML = mobHPValue
+
+}
+
+<!--ATK-->
+
+function mobATK(s) {
+
+var mobATKValue = parseInt(document.getElementById("mobATK").innerHTML) + s
+
+if (mobATKValue < 0){
+	mobATKValue = 0
+}
+	
+document.getElementById("mobATK").innerHTML = mobATKValue
+
+}
+
+<!--Dice-->
+
+function mobDice(s) {
+
+var mobDiceValue = parseInt(document.getElementById("mobDice").innerHTML) + s
+
+if (mobDiceValue < 0){
+	mobDiceValue = 0
+}
+	
+document.getElementById("mobDice").innerHTML = mobDiceValue
+
+}
+</script>
+
+</body>
+</html>
